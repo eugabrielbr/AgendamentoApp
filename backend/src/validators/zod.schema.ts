@@ -20,12 +20,14 @@ const dateTimeValid = z
     message: "Data e hora inválidas, use formato ISO 8601 (ex: 2025-11-19T14:00:00Z)",
   });
 
+
 // Schema completo do agendamento
 export const agendamentoValid = z.object({
   nome: nameValid,
   servico: serviceValid,
   dataHora: dateTimeValid, // use um único campo combinando data e hora
 });
+
 
 // Tipo TypeScript inferido
 export type AgendamentoInput = z.infer<typeof agendamentoValid>;

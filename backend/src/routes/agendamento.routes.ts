@@ -7,9 +7,11 @@ import {agendamentoValid} from "../validators/zod.schema"
 const router = Router();
 
 router.post('/agendamentos',validateData(agendamentoValid), agendamentoController.criarAgendamento);
+router.delete('/agendamentos/:id',agendamentoController.excluirAgendamento);
+router.get('/agendamentos',agendamentoController.ListarAgendamento);
 
 router.get('/', (req, res) => {
-  res.send('Olá, mundo!');
+  res.send('another version of me, I was in it');
 });
 
 export default router;
