@@ -1,5 +1,6 @@
 ## AgendamentoApp
-<p>Sistema web de agendamento de compromissos</p>
+> Sistema WEB de agendamento de comprimissos.
+
 
 ### Tecnologias a serem utilizadas
 
