@@ -26,6 +26,7 @@ export function Home() {
   try {
     const response = await api.get("/agendamentos");
 
+
     // <- AQUI ESTÁ A CORREÇÃO
     const lista = Array.isArray(response.data.lista)
       ? response.data.lista
@@ -35,6 +36,7 @@ export function Home() {
 
   } catch (err) {
     console.error("Erro ao carregar:", err);
+
   }
 
   setLoading(false);
