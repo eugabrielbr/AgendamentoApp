@@ -1,0 +1,20 @@
+/* src/pages/AgendamentosPage.css */
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+      /* deixa espaço para crescer */
+}
+
+.titulo{
+
+    margin-top: -20px;   /* sobe o título */
+   
+}
+
+.formTittle {
+   
+    margin-top: -50px; /* sobe tudo */
+}
