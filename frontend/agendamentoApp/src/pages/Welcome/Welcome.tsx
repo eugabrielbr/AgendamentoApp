@@ -1,11 +1,17 @@
 // src/pages/Welcome.tsx
 import React from "react";
-import { Button } from "../components/Button/Button";
-import { Section } from "../components/Section";
+import { Button } from "../../components/Button/ButtonWelcome";
+import { SectionWelcome } from "../../components/Section/SectionWelcome/SectionWelcome";
+
+import { useNavigate } from "react-router-dom";
 
 export function Welcome() {
+  const navigate = useNavigate()
+  
   const handleStart = () => {
-    alert("Vamos começar!");
+    
+    navigate("/home");
+  
   };
 
   // Cores do tema lilás aprimorado (escuras para contraste no card branco)
@@ -20,6 +26,7 @@ export function Welcome() {
     justifyContent: "center",
     alignItems: "center",
     overflow: "auto", 
+    
    
   };
 
@@ -40,20 +47,27 @@ export function Welcome() {
     maxWidth: "600px",
     margin: "0 auto 50px auto",
   };
+
+  const styleGroup: React.CSSProperties = {
+  marginTop: '-60px',
+};
+
   
   return (
     <div style={pageStyle}>
       {/* O Section continua branco para o contraste */}
-      <Section> 
-        <h1 style={headerStyle}>
-            <strong>Bem-vindo ao AgendamentoApp</strong>
-        </h1>
-        <p style={paragraphStyle}>
-          O <strong>AgendamentoApp</strong> é um sistema simples e eficiente para gerenciar seus compromissos. Organize seu tempo, agende reuniões e nunca perca nenhum compromisso importante.
-        </p>
-        {/* O Button agora usa a classe glow-on-hover, que tem fundo #111 (quase preto) */}
-        <Button label="Comece já!" onClick={handleStart} />
-      </Section>
+      <SectionWelcome> 
+        <div className="textos" style={styleGroup}>
+          <h1 style={headerStyle}>
+              <strong>Bem-vindo ao AgendamentoApp</strong>
+          </h1>
+          <p style={paragraphStyle}>
+            O <strong>AgendamentoApp</strong> é um sistema simples e eficiente para gerenciar seus compromissos. Organize seu tempo, agende reuniões e nunca perca nenhum compromisso importante.
+          </p>
+          {/* O Button agora usa a classe glow-on-hover, que tem fundo #111 (quase preto) */}
+          <Button label="Comece já!" onClick={handleStart} />
+        </div>
+      </SectionWelcome>
     </div>
   );
 }

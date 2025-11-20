@@ -1,13 +1,9 @@
-import { Navbar } from "./components/Navbar";
-import { Welcome } from "./pages/Welcome";
+import React from "react";
+import { AppRoutes } from "./routes/AppRoutes";
+
 
 function App() {
-
-  return (
-    <>
-      <Welcome />
-    </>
-  );
+  return <AppRoutes />;
 }
 
-export default App
+export default App;

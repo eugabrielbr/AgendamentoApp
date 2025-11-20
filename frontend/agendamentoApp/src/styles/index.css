@@ -1,17 +1,16 @@
 /* src/styles/index.css */
 
 /* === ESTILOS GLOBAIS (FUNDO LILÁS) === */
-html,body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* Fundo voltou para o lilás suave */
-    background: #ddc3f7; 
+    min-height: 100vh; /* <- importante */
+    display: block; /* <- removendo o flex */
+    
+    background: linear-gradient(270deg, #c8a2f3, #a084f7, #e9b0f7, #956fd3);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
 
     font-family: 'Roboto', sans-serif;
 }
@@ -80,4 +79,10 @@ html,body {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
