@@ -20,6 +20,9 @@
 - Vercel (front)
 - Render (back)
 - Railway (db)
+
+**Importante**: se por acaso o banco estiver indisponível (em produção), tente agendar algo para tira-lo do modo de suspensão. Por ser um serviço gratuito, ele fica inativo caso não receba requisições por um período de tempo.
+
 ### Estrutura do projeto
 
 ```
