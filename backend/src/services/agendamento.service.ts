@@ -16,7 +16,7 @@ export async function criarAgendamento(data: { nome: string; servico: string; da
     
   
 } catch (err: unknown) {
-    console.error("Erro ao criar agendamento:", err);
+   
     throw new Error("Não foi possível criar o agendamento.");
   }
 }
@@ -49,7 +49,7 @@ export async function listarAgendamentos() {
         const results = await prisma_client.agendamento.findMany();
         return results;
   } catch (error) {
-        console.error("Erro ao buscar registros:", error);
+        
         throw new Error("Não foi possível buscar os registros.");
   }
 }

@@ -80,7 +80,7 @@ export async function excluirAgendamento(req: Request, res: Response) {
 };
 
 
-function handleError(err: unknown, res: Response) {
+export function handleError(err: unknown, res: Response) {
   if (err instanceof Error) {
     res.status(400).json({ error: err.message });
   } else {

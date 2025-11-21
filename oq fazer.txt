@@ -1,5 +1,0 @@
-- separar css de tsx 
-- definir rotar
-- organizar diretórios
-- upar no git, fazer merge e criar nova branch pag home
-- tentar definir as rotas e listar agendamentos
