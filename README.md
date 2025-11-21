@@ -15,6 +15,11 @@
  - Typescript
  - Axios (envio de requisições)
 
+### Deploy
+
+- Vercel (front)
+- Render (back)
+- Railway (db)
 ### Estrutura do projeto
 
 ```
