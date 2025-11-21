@@ -132,6 +132,8 @@
 
 ### Como rodar
 
+**IMPORTANTE:** a versão que roda localmente está presente no release, de nome "Projeto final"! A versão mais atual no repositório está configurada para deploy.
+
 **1. Clone o Repositório**
 <p>Selecione uma pasta no seu computador e rode este código no terminal</p>
 
