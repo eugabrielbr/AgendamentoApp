@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 👉 Troque pela URL REAL da sua API
 export const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: import.meta.env.VITE_API_URL,
   timeout: 8000,
   headers: {
     "Content-Type": "application/json",
