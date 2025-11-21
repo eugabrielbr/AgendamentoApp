@@ -6,42 +6,6 @@ type Props = {
   onCreate: (name: string, service: string, datetime: string) => void;
 };
 
-const formStyle: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '12px',
-  marginBottom: '20px',
-  textAlign: 'left',
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: '12px 14px',
-  borderRadius: '10px',
-  border: '1px solid #e1e1e1',
-  fontSize: '15px',
-};
-
-const rowStyle: React.CSSProperties = {
-  display: 'flex',
-  gap: '10px',
-};
-
-const btnCriarStyle: React.CSSProperties = {
-  marginTop: '10px',
-  padding: '12px 18px',
-  borderRadius: '10px',
-  border: 'none',
-  cursor: 'pointer',
-  fontWeight: 'bold',
-  color: 'white',
-  background: '#a884f7',
-  transition: '0.2s',
-};
-
-const btnCriarHoverStyle: React.CSSProperties = {
-  ...btnCriarStyle,
-  background: '#8253ff',
-};
 
 
 export function AppointmentForm({ onCreate }: Props) {
@@ -58,6 +22,16 @@ export function AppointmentForm({ onCreate }: Props) {
       return;
     }
 
+    if (/[^a-záéíóúàãõâêôç\s]/i.test(name)){
+      alert("Nome inválido");
+      return; 
+    }
+
+    if (/[^a-záéíóúàãõâêôç\s]/i.test(service)){
+      alert("Serviço inválido");
+      return; 
+    }
+    
     // Convertendo para ISO 8601
     const datetime = new Date(`${date}T${time}:00`).toISOString();
 

@@ -62,7 +62,7 @@ export function Welcome() {
               <strong>Bem-vindo ao AgendamentoApp</strong>
           </h1>
           <p style={paragraphStyle}>
-            O <strong>AgendamentoApp</strong> é um sistema simples e eficiente para gerenciar seus compromissos. Organize seu tempo, agende reuniões e nunca perca nenhum compromisso importante.
+            O <strong>AgendamentoApp</strong> é um sistema simples e eficiente para gerenciar compromissos. Organize seu tempo, agende reuniões e nunca perca nenhum compromisso importante.
           </p>
           {/* O Button agora usa a classe glow-on-hover, que tem fundo #111 (quase preto) */}
           <Button label="Comece já!" onClick={handleStart} />

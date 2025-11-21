@@ -20,7 +20,7 @@ const sectionCardStyle: React.CSSProperties = {
 };
 
 
-export function SectionHome({ children, style }: SectionProps) {
+export function SectionHome({ children }: SectionProps) {
   return (
     <section
       style={sectionCardStyle} // permite sobrescrever estilos se quiser

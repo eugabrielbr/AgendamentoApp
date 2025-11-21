@@ -13,7 +13,7 @@ export function Button({ label, onClick, style, className = "" }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      // ⚠️ Aplica a classe CSS do efeito
+     
       className={`glow-on-hover ${className}`}
       style={style} 
     >

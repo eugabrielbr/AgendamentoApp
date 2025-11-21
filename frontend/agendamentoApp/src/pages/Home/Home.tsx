@@ -17,27 +17,27 @@ export function Home() {
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // =========================
-  // 🔵 LISTAR AGENDAMENTOS
-  // =========================
+  
+  // Listar agendamentos
   async function fetchAppointments() {
   setLoading(true);
 
   try {
     const response = await api.get("/agendamentos");
 
-
-    // <- AQUI ESTÁ A CORREÇÃO
     const lista = Array.isArray(response.data.lista)
       ? response.data.lista
       : [];
 
     setAppointments(lista);
 
-  } catch (err) {
-    console.error("Erro ao carregar:", err);
-
+  } catch (err: any) {
+    if (err.response && err.response.status === 404) {
+        console.error("Erro ao carregar:", err);
+    } else {
+        alert("Servidor indisponível")
   }
+}
 
   setLoading(false);
 }
@@ -46,9 +46,9 @@ export function Home() {
         fetchAppointments();
     }, []);
 
-  // =========================
-  // 🟢 CRIAR AGENDAMENTO
-  // =========================
+  
+  // Criar agendamentos
+
   async function createAppointment(nome: string, servico: string, dataHora: string) {
         try {
         const payload = { nome, servico, dataHora };
@@ -61,9 +61,8 @@ export function Home() {
         }
 }
 
-  // =========================
-  // 🔴 DELETAR AGENDAMENTO
-  // =========================
+  // Deletar agendamentos
+
   async function deleteAppointment(id: number) {
   try {
     await api.delete(`/agendamentos/${id}`);
