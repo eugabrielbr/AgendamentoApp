@@ -1,5 +1,9 @@
 ## AgendamentoApp
-> Sistema WEB simples de agendamento de compromissos, seguindo os requisitos de um desafio técnico. Com ele é possivel criar, excluir e listar compromissos. 
+> Sistema WEB simples de agendamento de compromissos, seguindo os requisitos de um desafio técnico. Com ele é possivel criar, excluir e listar compromissos.
+
+**Importante**
+- Se por acaso o servidor estiver indisponível (em produção), tente agendar algo para tira-lo do modo de suspensão. Por ser um serviço gratuito, ele fica inativo caso não receba requisições por um período de tempo.
+- A versão que roda localmente está presente no release, de nome "Projeto final"! A versão mais atual no repositório está configurada para deploy.
 
 ### Tecnologias principais utilizadas
 
@@ -21,7 +25,7 @@
 - Render (back)
 - Railway (db)
 
-**Importante**: se por acaso o servidor estiver indisponível (em produção), tente agendar algo para tira-lo do modo de suspensão. Por ser um serviço gratuito, ele fica inativo caso não receba requisições por um período de tempo.
+
 
 ### Estrutura do projeto
 
@@ -139,8 +143,6 @@
 ```
 
 ### Como rodar
-
-**IMPORTANTE:** a versão que roda localmente está presente no release, de nome "Projeto final"! A versão mais atual no repositório está configurada para deploy.
 
 **1. Clone o Repositório**
 <p>Selecione uma pasta no seu computador e rode este código no terminal</p>
